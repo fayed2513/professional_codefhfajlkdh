@@ -12,12 +12,12 @@ public class StudentList {
         if (args[0].equals("a")) {
             System.out.println("Loading data ...");
             try {
-                BufferedReader s = new BufferedReader(
+                BufferedReader bufferedReader = new BufferedReader(
                                    new InputStreamReader(
                                    new FileInputStream("students.txt")));
-                String r = s.readLine();
-                String i[] = r.split(",");
-                for (String j : i) {
+                String readLine = bufferedReader.readLine();
+                String Students[] = readLine.split(",");
+                for (String j : Students) {
                     System.out.println(j);
                 }
             } catch (Exception e) {
